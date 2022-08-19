@@ -9,13 +9,24 @@
 <body>
 <h1>Je fais du Regex !</h1>
 <?php
-$masque = '/m/i'; // La lettre 'i' rend le masque insensible à la casse
+$masque = '/m/';
 $chaine = 'mere michel';
+$match = [];
+$match_all = [];
 
-if (preg_match($masque,$chaine)){
+preg_match($masque,$chaine,$match);
+preg_match_all($masque,$chaine,$match_all);
+
+var_dump($match);
+echo "<br />";
+
+var_dump($match_all);
+echo "<br />";
+
+if (preg_match($masque, $chaine)) {
     echo "<p>j'ai trouvé l'occurence</p>";
-    echo "<p>Le caractère recherché est présent : " . preg_match_all($masque,$chaine) . " fois.</p>";
-}else{
+    echo "<p>Le caractère recherché est présent : " . preg_match_all($masque, $chaine) . " fois.</p>";
+} else {
     echo "<p>je n'ai rien trouvé</p>";
 }
 
