@@ -74,11 +74,20 @@ $masque1 = "/[\W]/";
 $masque2 = "/[\d]/";
 $masque3 = "/[\D]/";
 $masque4 = "/[\s]/";
-
+$masque1 = "/^[A-Z]/"; // Recherche une majuscule en début de chaîne
 $masque1 = "/./";
 $masque2 = "/[.]/";
+$masque1 = "/\?$/"; // Recherche si la fin de la chaine de caractères se termine par un ?
   */
-$masque1 = "/ap|pe|ll/";
+
+/* Les quantificateurs
+* a{X}, séquence de X fois le caractère a
+*
+*
+*
+*
+*/
+$masque1 = "/ap|pe|ll/"; // opérateur logique ou |
 
 $chaine = "Je m'appelle Jean-Louis et j'ai 42 ans";
 
