@@ -42,6 +42,17 @@ var_dump($tableau3);
 echo "<br />";
 var_dump($tableau4);
 
+// Métacaractères :
+// - \, caractère d'échappement
+// - ^, exclure la classe de caractères recherchés
+// - -, intervalle de caractères
+
+$masque1 = "/[^c]/i";
+$chaine = "C'est combien une place de cinema sans les c";
+
+preg_match_all($masque1, $chaine, $tableau1);
+
+var_dump($tableau1);
 
 
 ?>
