@@ -54,6 +54,40 @@ preg_match_all($masque1, $chaine, $tableau1);
 
 var_dump($tableau1);
 
+/*  Classes de caractères abbrégées
+    *   \w, tous les caractères [a-zA-Z0-9_]
+    *   \W, aucune caractères [^a-zA-Z0-9_]
+    *   \d, tous les valeurs numériques
+    *   \D, tout ce qui n'est pas une valeur numérique
+    *   \s, caractère blanc (espace, retour chariot, retour à la ligne)
+    *   \S, tout sauf un caractère blanc
+    *   \h, espace horizontal
+    *   \H, tout sauf espace horizontal
+    *   \v, espace vertical
+    *   \V, tout sauf espace vertical
+    */
+
+
+$masque1 = "/[\W]/";
+$masque2 = "/[\d]/";
+$masque3 = "/[\D]/";
+$masque4 = "/[\s]/";
+$chaine = "Je m'appelle Jean-Louis et j'ai 42 ans";
+
+preg_match_all($masque1, $chaine, $tableau1);
+preg_match_all($masque2, $chaine, $tableau2);
+preg_match_all($masque3, $chaine, $tableau3);
+preg_match_all($masque4, $chaine, $tableau4);
+
+var_dump($tableau1);
+echo "<br />";
+var_dump($tableau2);
+echo "<br />";
+var_dump($tableau3);
+echo "<br />";
+var_dump($tableau4);
+
+
 
 ?>
 </body>
