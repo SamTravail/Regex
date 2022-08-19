@@ -9,7 +9,16 @@
 <body>
 <h1>Je fais du Regex !</h1>
 <?php
-$masque = '/michel/';
+$masque = '/m/i'; // La lettre 'i' rend le masque insensible à la casse
+$chaine = 'mere michel';
+
+if (preg_match($masque,$chaine)){
+    echo "<p>j'ai trouvé l'occurence</p>";
+    echo "<p>Le caractère recherché est présent : " . preg_match_all($masque,$chaine) . " fois.</p>";
+}else{
+    echo "<p>je n'ai rien trouvé</p>";
+}
+
 ?>
 </body>
 </html>
